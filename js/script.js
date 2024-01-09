@@ -64,6 +64,7 @@ createApp({
             
         },
 
+        // Creo una Funzione che inverta il valore della proprietà "done" al click sull'item della lista
         invertDoneProperty(i) {
             if (this.todos[i].done == false) {
                 this.todos[i].done = true;
