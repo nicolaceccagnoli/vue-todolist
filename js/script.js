@@ -54,6 +54,7 @@ createApp({
                 done: false
             }
 
+            // .trim() è un metodo che rimuove gli spazi da entrambi i lati di una stringa
             if (this.newTodo.trim().length > 0) {
                 this.todos.push(newObj);
                 this.newTodo = '';
