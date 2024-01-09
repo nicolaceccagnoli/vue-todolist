@@ -21,7 +21,11 @@
 
             <div>
                 <ul>
-                    <li v-for="(singleTodo, index) in todos">
+                    <li v-for="(singleTodo, index) in todos" 
+                       :class="{
+                        'done': singleTodo.done == true,
+                        'not-done': singleTodo.done == false
+                    }">
                         {{ index + 1 }} - {{ singleTodo.text }}
                     </li>
                 </ul>

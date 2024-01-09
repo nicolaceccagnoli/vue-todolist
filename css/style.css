@@ -14,3 +14,11 @@ html {
 li {
     list-style: none;
 }
+
+li.done {
+    color: green;
+}
+
+li.not-done {
+    color: red;
+}
