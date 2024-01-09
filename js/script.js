@@ -26,11 +26,11 @@ createApp({
                     done: true 
                 }, 
                 {
-                    text : 'Compleatre il 1^ Bonus',
+                    text : 'Completare il 1^ Bonus',
                     done: true, 
                 },
                 {
-                    text : 'Compleatre il 2^ Bonus',
+                    text : 'Completare il 2^ Bonus',
                     done: true, 
                 }
             ],
