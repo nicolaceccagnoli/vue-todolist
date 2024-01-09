@@ -20,6 +20,13 @@
             </h1>
 
             <div>
+                <input v-model="newTodo" type="text" placeholder="Scrivi cosa hai da fare">
+                <button @click="createObjTodos()" class="btn btn-primary">
+                    Aggiungi alla Lista
+                </button>
+            </div>
+
+            <div>
                 <ul>
                     <li v-for="(singleTodo, index) in todos" 
                        :class="{

@@ -19,7 +19,7 @@ createApp({
                 }, 
                 {
                     text : 'Completare la Milestone 3',
-                    done: false 
+                    done: true 
                 }, 
                 {
                     text : 'Finire l\'esercizio di oggi',
@@ -33,9 +33,10 @@ createApp({
                     text : 'Compleatre il 2^ Bonus',
                     done: false, 
                 }
+            ],
 
-
-            ]
+            // Dichiaro una Variabile che mi servirà per aggiungere un nuovo punto alla lista
+            newTodo: ''
 
         };
     }, methods: {
@@ -43,6 +44,23 @@ createApp({
         removeTodo(i) {
             this.todos.splice(i, 1);
             // .splice rimuove gli elementi da un array e vuole sempre almeno 2 argomenti (l'indice dell'elemento dell'array da cui partire, il numero di elementi da rimuovere partendo dall'indice stabilito)
+        },
+        
+        // Dichiaro una funzione che servirà per creare un nuovo oggetto e al click sul bottone mi pushi lo stesso oggetto nell'array
+        createObjTodos() {
+
+            const newObj = {
+                text : this.newTodo,
+                done: false
+            }
+
+            if (this.newTodo.trim().length > 0) {
+                this.todos.push(newObj);
+                this.newTodo = '';
+            }
+
+            console.log(this.todos);
+            
         }
     }
   // Monto l'istanza di Vue in pagina
