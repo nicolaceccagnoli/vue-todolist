@@ -23,15 +23,15 @@ createApp({
                 }, 
                 {
                     text : 'Finire l\'esercizio di oggi',
-                    done: false 
+                    done: true 
                 }, 
                 {
                     text : 'Compleatre il 1^ Bonus',
-                    done: false, 
+                    done: true, 
                 },
                 {
                     text : 'Compleatre il 2^ Bonus',
-                    done: false, 
+                    done: true, 
                 }
             ],
 
@@ -62,6 +62,14 @@ createApp({
 
             console.log(this.todos);
             
+        },
+
+        invertDoneProperty(i) {
+            if (this.todos[i].done == false) {
+                this.todos[i].done = true;
+            } else {
+                this.todos[i].done = false
+            }
         }
     }
   // Monto l'istanza di Vue in pagina

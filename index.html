@@ -30,6 +30,7 @@
             <div class="mt-5">
                 <ul class="list-group container">
                     <li v-for="(singleTodo, index) in todos" 
+                        @click="invertDoneProperty(index)"
                        :class="{
                         'done': singleTodo.done == true,
                         'not-done': singleTodo.done == false
